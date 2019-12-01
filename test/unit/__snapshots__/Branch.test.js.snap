@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`lookup returns correctly for mixed regexp and string lookups 1`] = `
+Object {
+  "foundRoute": true,
+  "handler": [Function],
+  "params": Object {
+    "get": Object {},
+    "url": Object {
+      "paramb": "asdf",
+    },
+  },
+}
+`;
+
+exports[`lookup returns correctly for simple string lookups 1`] = `
+Object {
+  "foundRoute": true,
+  "handler": [Function],
+  "params": Object {
+    "get": Object {},
+    "url": Object {},
+  },
+}
+`;
+
+exports[`lookup returns correctly for simple string lookups removing the trailing slash 1`] = `
+Object {
+  "foundRoute": true,
+  "handler": [Function],
+  "params": Object {
+    "get": Object {},
+    "url": Object {},
+  },
+}
+`;
+
+exports[`lookup returns correctly for simple string lookups that don't match 1`] = `
+Object {
+  "foundRoute": false,
+  "handler": undefined,
+  "params": Object {
+    "get": Object {},
+    "url": Object {},
+  },
+}
+`;
+
+exports[`lookup returns correctly handles different methods falling back to ANY 1`] = `
+Object {
+  "foundRoute": true,
+  "handler": [Function],
+  "params": Object {
+    "get": Object {},
+    "url": Object {
+      "paramc": "acacaccc",
+    },
+  },
+}
+`;
+
+exports[`lookup returns correctly handles different methods falling back to ANY 2`] = `
+Object {
+  "foundRoute": true,
+  "handler": [Function],
+  "params": Object {
+    "get": Object {
+      "bob": "sue",
+      "cat": "alfie",
+    },
+    "url": Object {},
+  },
+}
+`;
+
+exports[`lookup returns correctly handles regexp extra bits on params 1`] = `
+Object {
+  "foundRoute": true,
+  "handler": [Function],
+  "params": Object {
+    "get": Object {},
+    "url": Object {
+      "paramA": "asdfasdf",
+      "paramB": "fffffffs",
+    },
+  },
+}
+`;
+
+exports[`lookup returns correctly not found when leaf doesn't exist 1`] = `
+Object {
+  "foundRoute": true,
+  "handler": [Function],
+  "params": Object {
+    "get": Object {},
+    "url": Object {
+      "paramc": "asdfasdf",
+    },
+  },
+}
+`;
+
+exports[`the tree is build correctly for leaf regexp 1`] = `
+Leaf {
+  "children": Object {
+    "regexps": Object {
+      "{param}": Leaf {
+        "children": Object {
+          "regexps": Object {},
+          "strings": Object {
+            "path": Leaf {
+              "children": Object {
+                "regexps": Object {},
+                "strings": Object {},
+              },
+              "handlers": Object {
+                "GET": [Function],
+              },
+              "regexp": null,
+            },
+          },
+        },
+        "handlers": Object {},
+        "regexp": /\\(\\?<param>\\.\\*\\)/,
+      },
+    },
+    "strings": Object {},
+  },
+  "handlers": Object {},
+  "regexp": null,
+}
+`;
+
+exports[`the tree is build correctly for leaf string 1`] = `
+Leaf {
+  "children": Object {
+    "regexps": Object {},
+    "strings": Object {
+      "simplestring": Leaf {
+        "children": Object {
+          "regexps": Object {},
+          "strings": Object {
+            "path": Leaf {
+              "children": Object {
+                "regexps": Object {},
+                "strings": Object {},
+              },
+              "handlers": Object {
+                "GET": [Function],
+              },
+              "regexp": null,
+            },
+          },
+        },
+        "handlers": Object {},
+        "regexp": null,
+      },
+    },
+  },
+  "handlers": Object {},
+  "regexp": null,
+}
+`;

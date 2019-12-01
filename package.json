@@ -1,0 +1,38 @@
+{
+  "name": "@forge-io/branch",
+  "version": "0.1.6",
+  "description": "A String and RegExp tree.",
+  "main": "lib/branch.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --coverage",
+    "docs": "rm -Rf docs/* && jsdoc -c jsdoc.json",
+    "pub": "npm run test && npm run docs && npm publish --access public"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/test"
+    ],
+    "coverageDirectory": "coverage",
+    "testEnvironment": "node",
+    "clearMocks": true,
+    "coverageThreshold": {
+      "global": {
+        "branches": 95,
+        "functions": 95,
+        "lines": 95,
+        "statements": 95
+      }
+    }
+  },
+  "author": "DanBUK <dan@forge.io>",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "jsdoc": "^3.6.3",
+    "jest-cli": "^24.9.0"
+  },
+  "dependencies": {}
+}
