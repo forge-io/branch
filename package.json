@@ -1,6 +1,6 @@
 {
   "name": "@forge-io/branch",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "A String and RegExp tree.",
   "main": "lib/branch.js",
   "directories": {
@@ -8,9 +8,11 @@
     "test": "test"
   },
   "scripts": {
+    "lint": "eslint ./lib",
+    "lint:fix": "eslint --fix ./lib",
     "test": "jest --coverage",
     "docs": "rm -Rf docs/* && jsdoc -c jsdoc.json",
-    "pub": "npm run test && npm run docs && npm publish --access public"
+    "pub": "npm run lint && npm run test && npm run docs && npm publish --access public"
   },
   "jest": {
     "roots": [
@@ -31,8 +33,9 @@
   "author": "DanBUK <dan@forge.io>",
   "license": "GPL-3.0",
   "devDependencies": {
-    "jsdoc": "^3.6.3",
-    "jest-cli": "^24.9.0"
+    "eslint": "^6.7.2",
+    "jest-cli": "^24.9.0",
+    "jsdoc": "^3.6.3"
   },
   "dependencies": {},
   "homepage": "https://github.com/forge-io/branch",
