@@ -1,6 +1,6 @@
 {
   "name": "@forge-io/branch",
-  "version": "0.1.8",
+  "version": "0.1.10",
   "description": "A String and RegExp tree.",
   "main": "lib/branch.js",
   "directories": {
@@ -38,7 +38,7 @@
     "jsdoc": "^3.6.3"
   },
   "dependencies": {},
-  "homepage": "https://github.com/forge-io/branch",
+  "homepage": "https://branch.forge.io/",
   "repository": {
     "type": "git",
     "url": "https://github.com/forge-io/branch.git"
